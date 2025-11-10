@@ -1,0 +1,336 @@
+/* Configurações básicas e Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    color: #333333; /* Texto em cinza escuro para boa legibilidade */
+    background-color: #F8F8F4; /* Fundo principal em Bege/Off-white */
+    line-height: 1.6;
+}
+
+/* Efeitos de Transição em Geral */
+.cta-button,
+.produto-item button, /* Ajustado para o novo seletor de botão de produto */
+.contato-form button,
+.categoria-item,
+.header-icons i,
+nav a {
+    transition: all 0.3s ease; /* Aplica transição a todas as propriedades em 0.3 segundos */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #F8F8F4; /* Fundo bege claro */
+    color: #333333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #4CAF50; /* Logo em verde */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Mais espaço entre os itens */
+}
+
+nav a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500; /* Levemente mais fino */
+}
+
+nav a:hover {
+    color: #4CAF50; /* Verde no hover */
+}
+
+.header-icons i {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.header-icons i:hover {
+    color: #4CAF50;
+}
+
+/* Seção Hero (Banner com Imagem Ecológica) */
+.hero {
+    background-color: #E8F5E9; /* Verde bem claro para o banner */
+    padding: 80px 20px; /* Mais padding */
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    display: flex; /* Para centralizar o conteúdo verticalmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px; /* Altura mínima para o banner */
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #66BB6A; /* Verde secundário para o botão de ação */
+    color: white;
+    padding: 12px 25px; /* Maior padding */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #4CAF50; 
+    transform: scale(1.03); /* Leve aumento de tamanho no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Seção de Categorias (Reciclado, Orgânico, Brechó) */
+.category-section {
+    margin-bottom: 40px;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+}
+
+.categoria-item {
+    background-color: #E8F5E9; /* Fundo verde claro */
+    padding: 30px 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.categoria-item i {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.categoria-item h3 {
+    margin-bottom: 0;
+    color: #333333;
+}
+
+.categoria-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    background-color: #D8EDDA; /* Um pouco mais escuro no hover */
+}
+
+/* Seção "Moda que cuida do planeta" */
+.about-section {
+    background-color: #E8F5E9; /* Verde claro */
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.about-section h2 i {
+    margin-left: 10px;
+    color: #4CAF50;
+}
+
+/* Seção de Contato */
+.contact-section {
+    margin-bottom: 40px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para formulário e info */
+    gap: 30px;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    background-color: #F8F8F4; /* Campos do formulário em Bege */
+    border: 1px solid #CCCCCC;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contato-form button[type="submit"] {
+    background-color: #66BB6A; 
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+    width: 150px; /* Largura fixa para o botão */
+}
+
+.contato-form button[type="submit"]:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.1em;
+}
+
+.contact-info p i {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+/* Seção de Produtos (Showcase) */
+.product-showcase {
+    margin-bottom: 40px;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+}
+
+.produto-item {
+    background-color: #FFFFFF; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Para empurrar o título para baixo */
+}
+
+.produto-item .image-placeholder {
+    width: 100%;
+    height: 180px; /* Altura fixa para o placeholder da imagem */
+    background-color: #E8F5E9; /* Fundo verde claro para a imagem */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-style: italic;
+}
+
+.produto-item h3 {
+    margin-bottom: 0; /* Remove margem inferior para títulos de produto */
+    color: #333333;
+    font-size: 1.1em;
+}
+
+/* Rodapé */
+footer {
+    background-color: #4CAF50; /* Rodapé em Verde principal */
+    color: white;
+    text-align: center;
+    padding: 15px; /* Um pouco menos de padding */
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap; /* Permite que os itens da nav quebrem a linha */
+        justify-content: center;
+        gap: 15px;
+    }
+    .header-icons {
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .categorias-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Uma coluna para formulário e info */
+    }
+    .contact-info {
+        text-align: center;
+    }
+    .contato-form button[type="submit"] {
+        align-self: stretch; /* Ocupa a largura total */
+        width: auto;
+    }
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2em;
+    }
+    nav ul {
+        flex-direction: column; /* Itens de navegação em coluna */
+        gap: 10px;
+    }
+}
+
